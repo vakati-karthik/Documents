@@ -1,0 +1,16 @@
+================================================
+        MongoDB Installation on Mac OS X
+===============================================
+
+MongoDB version: 3.0.4
+Mac OS X version: Yosemite(10.10.2)
+
+Step 1: brew update
+Step 2: brew install mongodb
+#Instead of the default location for data directory which is /data/db, create the data directory in different location. (The purpose of creating this document.)
+Step 3: mkdir -p /workspace/different_location/data/db
+Step 4: mongod
+#Export the collection "test_table" from database "test_database" located on a mongodb server (eg. 192.168.30.30) to a csv
+Step 5: mongoexport --host 192.168.30.30 --db test_database --collection test_table --out output_file.csv
+#Export the collection "test_table" from database "test_database" located on a mongodb server (eg. 192.168.30.30) to a json
+Step 5: mongoexport --host 192.168.30.30 --db test_database --collection test_table --out output_file.json
